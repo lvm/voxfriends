@@ -10,14 +10,170 @@
   </head>
   <body>
 
-    <canvas id="c" width="500" height="500"></canvas>
-    <br>
-    <input type="button" onclick="changeColor()" value="changeColor" />
-    <img id="img" height="4" style="image-rendering: pixelated">
+    <select>
+      <option value=""> -- select chr -- </option>
+      <optgroup label="friends">
+	<option value="chr_ale">chr_ale</option>
+	<option value="chr_alegrimm">chr_alegrimm</option>
+	<option value="chr_alma">chr_alma</option>
+	<option value="chr_bran">chr_bran</option>
+        <option value="chr_damian">chr_damian</option>
+	<option value="chr_devo">chr_devo</option>
+	<option value="chr_duende">chr_duende</option>
+	<option value="chr_gumer">chr_gumer</option>
+	<option value="chr_hugo">chr_hugo</option>
+	<option value="chr_joaquin">chr_joaquin</option>
+	<option value="chr_jupiter">chr_jupiter</option>
+	<option value="chr_luciano">chr_luciano</option>
+	<option value="chr_lucio">chr_lucio</option>
+	<option value="chr_luna">chr_luna</option>
+	<option value="chr_machunga">chr_machunga</option>
+	<option value="chr_machunga2">chr_machunga2</option>
+	<option value="chr_malefico">chr_malefico</option>
+	<option value="chr_marina">chr_marina</option>
+	<option value="chr_mauro">chr_mauro</option>
+	<option value="chr_mercedes">chr_mercedes</option>
+	<option value="chr_nacho">chr_nacho</option>
+	<option value="chr_nadia">chr_nadia</option>
+	<option value="chr_rodri">chr_rodri</option>
+	<option value="chr_tom">chr_tom</option>
+	<option value="chr_toshi">chr_toshi</option>
+	<option value="chr_ulalume">chr_ulalume</option>
+	<option value="chr_valerie">chr_valerie</option>
+	<option value="chr_violeta">chr_violeta</option>
+      </optgroup>
+      <optgroup label="superheroes">
+	<option value="chr_sereno">chr_sereno</option>
+	<optgroup label="dc">
+      	  <option value="chr_aquaman">chr_aquaman</option>
+	  <option value="chr_batgirl">chr_batgirl</option>
+	  <option value="chr_batman">chr_batman</option>
+	  <option value="chr_batman2">chr_batman2</option>
+	  <option value="chr_catwoman">chr_catwoman</option>
+	  <option value="chr_flash">chr_flash</option>
+	  <option value="chr_greenlantern">chr_greenlantern</option>
+	  <option value="chr_harleyquinn">chr_harleyquinn</option>
+	  <option value="chr_joker">chr_joker</option>
+	  <option value="chr_nightwing">chr_nightwing</option>
+	  <option value="chr_poisonivy">chr_poisonivy</option>
+	  <option value="chr_raven">chr_raven</option>
+	  <option value="chr_robin">chr_robin</option>
+	  <option value="chr_supergirl">chr_supergirl</option>
+	  <option value="chr_superman">chr_superman</option>
+	  <option value="chr_wonderwoman">chr_wonderwoman</option>
+	</optgroup> 
+      	<optgroup label="marvel">
+	  <option value="chr_beast">chr_beast</option>
+	  <option value="chr_capamerica">chr_capamerica</option>
+	  <option value="chr_carnage">chr_carnage</option>
+	  <option value="chr_colossus">chr_colossus</option>
+	  <option value="chr_cyclops">chr_cyclops</option>
+	  <option value="chr_daredevil">chr_daredevil</option>
+	  <option value="chr_deadpool">chr_deadpool</option>
+	  <option value="chr_gambit">chr_gambit</option>
+	  <option value="chr_hulk">chr_hulk</option>
+	  <option value="chr_ironmanvox">chr_ironmanvox</option>
+	  <option value="chr_jeanphoenix">chr_jeanphoenix</option>
+	  <option value="chr_jubilee">chr_jubilee</option>
+	  <option value="chr_rogue">chr_rogue</option>
+	  <option value="chr_spidey">chr_spidey</option>
+	  <option value="chr_storm">chr_storm</option>
+	  <option value="chr_venom">chr_venom</option>
+	  <option value="chr_wolverine">chr_wolverine</option>
+	  <option value="chr_xavier">chr_xavier</option>
+	</optgroup> 
+      </optgroup>
+      <optgroup label="film">
+      	<option value="chr_austinpowers">chr_austinpowers</option>
+	<option value="chr_brucelee">chr_brucelee</option>
+	<option value="chr_brucelee2">chr_brucelee2</option>
+	<option value="chr_rocky">chr_rocky</option>
+	<option value="chr_ivandrago">chr_ivandrago</option>
+	<option value="chr_leeloo">chr_leeloo</option>
+	<option value="chr_leeloo2">chr_leeloo2</option>
+      </optgroup>
+      <optgroup label="fear and loathing in las vegas">
+	<option value="chr_drgonzo">chr_drgonzo</option>
+	<option value="chr_thompson">chr_thompson</option>
+      </optgroup>
+      <optgroup label="rick and morty">
+	<option value="chr_morty">chr_morty</option>
+	<option value="chr_rick">chr_rick</option>
+      </optgroup>
+      <optgroup label="adventure time">
+	<option value="chr_bmo">chr_bmo</option>
+	<option value="chr_finn">chr_finn</option>
+	<option value="chr_jake">chr_jake</option>
+	<option value="chr_princessbubblegum">chr_princessbubblegum</option>
+      </optgroup>
+      <optgroup label="breaking bad">
+	<option value="chr_jessiepinkman">chr_jessiepinkman</option>
+	<option value="chr_mikeehrmantraut">chr_mikeehrmantraut</option>
+	<option value="chr_saulgoodman">chr_saulgoodman</option>
+	<option value="chr_walterwhite">chr_walterwhite</option>
+	<option value="chr_gustavofring">chr_gustavofring</option>
+      </optgroup>
+      <optgroup label="tarantino">
+	<optgroup label="kill bill">
+	  <option value="chr_beatrixkiddo">chr_beatrixkiddo</option>
+	</optgroup>
+	<optgroup label="reservoir dogs">
+	  <option value="chr_joecabot">chr_joecabot</option>
+	  <option value="chr_mrblonde">chr_mrblonde</option>
+	  <option value="chr_mrblue">chr_mrblue</option>
+	  <option value="chr_mrbrown">chr_mrbrown</option>
+	  <option value="chr_mrorange">chr_mrorange</option>
+	  <option value="chr_mrpink">chr_mrpink</option>
+	  <option value="chr_mrwhite">chr_mrwhite</option>
+	  <option value="chr_niceguyeddie">chr_niceguyeddie</option>
+	</optgroup>
+	<optgroup label="pulp fiction">
+	  <option value="chr_butch">chr_butch</option>
+	  <option value="chr_marsellus">chr_marsellus</option>
+	  <option value="chr_miawallace">chr_miawallace</option>
+	  <option value="chr_vincentvega">chr_vincentvega</option>
+	  <option value="chr_vincentvega2">chr_vincentvega2</option>
+	  <option value="chr_juleswinfield">chr_juleswinfield</option>
+	  <option value="chr_juleswinfield2">chr_juleswinfield2</option>
+	</optgroup>
+      </optgroup>
+      <optgroup label="spanish inquisition">
+	<option value="chr_spanish">chr_spanish</option>
+	<option value="chr_spanish2">chr_spanish2</option>
+	<option value="chr_spanish3">chr_spanish3</option>
+      </optgroup>
+      <optgroup label="el dia de la bestia">
+	<option value="chr_eddlb_cavan">chr_eddlb_cavan</option>
+	<option value="chr_eddlb_cura">chr_eddlb_cura</option>
+	<option value="chr_eddlb_josemaria">chr_eddlb_josemaria</option>
+      </optgroup>
+      <optgroup label="x files">
+	<option value="chr_byers">chr_byers</option>
+	<option value="chr_frohike">chr_frohike</option>
+	<option value="chr_grey">chr_grey</option>
+	<option value="chr_langley">chr_langley</option>
+	<option value="chr_mulder">chr_mulder</option>
+	<option value="chr_scully">chr_scully</option>
+	<option value="chr_skinner">chr_skinner</option>
+	<option value="chr_smokingman">chr_smokingman</option>
+      </optgroup>
+      <optgroup label="random">
+	<option value="chr_banana">chr_banana</option>
+	<option value="chr_shaolin">chr_shaolin</option>
+	<option value="chr_grace">chr_grace</option>
+	<option value="chr_mrt">chr_mrt</option>
+	<option value="chr_pangaro">chr_pangaro</option>
+	<option value="chr_prince">chr_prince</option>
+	<option value="chr_resident">chr_resident</option>
+	<option value="chr_robertantonwilson">chr_robertantonwilson</option>
+	<option value="chr_timothyleary">chr_timothyleary</option>
+	<option value="chr_picard">chr_picard</option>
+	<option value="chr_mckenna">chr_mckenna</option>
+      </optgroup>  
+    </select>
+    <canvas id="c"></canvas>
+
     <script>
-
-     var texture = null;
-
      window.onload = function() {
        var updateListeners = [];
        var update = function(frame) {
@@ -25,61 +181,62 @@
            listener(frame);
          });
        };
+       var canvas = document.querySelector("canvas");
+       var select = document.querySelector("select");
+       var anchor = document.createElement("a");
+       anchor.href = window.location.href;
        
        var scene = new THREE.Scene();
-
-       var camera = new THREE.PerspectiveCamera(70, 1, 0.1, 1000);
-       var cameraTarget = new THREE.Vector3(0, 5, 0);
+       var camera = new THREE.PerspectiveCamera(100, window.innerWidth/window.innerHeight, 0.1, 1000);
+       var cameraTarget = new THREE.Vector3(0, 6.66, 0);
        updateListeners.push(function(frame) {
-         camera.position.x = Math.cos(frame * 0.004) * 30;
-         camera.position.y = 15;
-         camera.position.z = Math.sin(frame * 0.004) * 30;
+         camera.position.x = Math.cos(frame * 0.01) * 50;
+         camera.position.y = 25;
+         camera.position.z = Math.sin(frame * 0.01) * 50;
          camera.lookAt(cameraTarget);
        });
-       
-       var directionalLight = new THREE.DirectionalLight(0xffffff);
+     
+       var directionalLight = new THREE.DirectionalLight(0xffffff, 0.95);
        directionalLight.castShadow = true;
-       directionalLight.shadowCameraVisible = false;
-       directionalLight.shadowMapWidth = directionalLight.shadowMapHeight = 1024;
-       updateListeners.push(function(frame) {
-         directionalLight.position.x = Math.cos(frame * -0.001) * 100;
-         directionalLight.position.y = 100;
-         directionalLight.position.z = Math.sin(frame * -0.001) * 100;
-       });
+       directionalLight.shadowMapWidth = directionalLight.shadowMapHeight = 512;
+       directionalLight.shadowCameraTop = 100;
+       directionalLight.shadowCameraBottom = -100;
+       directionalLight.shadowCameraLeft = -100;
+       directionalLight.shadowCameraRight = 100;
+       directionalLight.shadowCameraNear = 0.1;
+       directionalLight.shadowCameraFar = 1000;
+       directionalLight.position.set(100, 100, 100);
        scene.add(directionalLight);
 
-       var ambientLight = new THREE.AmbientLight(0xaaaaaa);
+       var ambientLight = new THREE.AmbientLight(0x666666);
        scene.add(ambientLight);
        
-       var ground = new THREE.Mesh(new THREE.PlaneGeometry(300, 300), new THREE.MeshPhongMaterial({
-         color: 0x555555,
-         shininess: 1,
-       }));
-       ground.castShadow = false;
-       ground.receiveShadow = true;
-       ground.rotation.x = Math.PI * -0.5;
-       scene.add(ground);
-       
        var renderer = new THREE.WebGLRenderer({
-         canvas: document.getElementById("c")
+         canvas: canvas
        });
-       renderer.setSize(500, 500);
+       renderer.setSize(window.innerWidth, window.innerHeight);
        renderer.shadowMapEnabled = true;
-       renderer.setClearColor(0x000000);
-       
+       renderer.setClearColor(0xf9ffe0);
+
        var parser = new vox.Parser();
-       parser.parse("vox/mv0.97/p1.vox").then(function(voxelData) {
+       var render_voxel = function(voxelData) {
          var builder = new vox.MeshBuilder(voxelData);
          var mesh = builder.createMesh();
          mesh.position.set(0, 0, 0);
          mesh.castShadow = true;
          mesh.receiveShadow = false;
+         scene.children.pop();
          scene.add(mesh);
-         
-         texture = builder.getTexture();
-         document.getElementById("img").src = texture.image.toDataURL();
+       };
+       var chr_vox = anchor.search ? anchor.search.replace("?", "") : "chr_grey";
+       window.history.pushState( {}, "voxfriends", anchor.pathname + "?" + chr_vox);
+       parser.parse("vox/"+chr_vox+".vox").then(render_voxel);
+
+       select.addEventListener("change", function(){
+         window.history.pushState( {}, "voxfriends", anchor.pathname + "?" + this.value);
+         parser.parse("vox/"+this.value+".vox").then(render_voxel);
        });
-       
+     
        var frame = 0;
        var render = function() {
          update(frame++);
@@ -87,25 +244,6 @@
          requestAnimationFrame(render);
        };
        render();
-     };
-
-     var changeColor = function() {
-       if (texture === null) return;
-       
-       var canvas = texture.image;
-       var context = canvas.getContext("2d");
-       
-       var rnd = function(){ return Math.floor(Math.random() * 256) };
-       
-       for (var y = 0; y < canvas.height; y++) {
-         for (var x = 0; x < canvas.width; x++) {
-           context.fillStyle = "rgb(" + rnd() + ", " + rnd() + ", " + rnd() + ")";
-           context.fillRect(x, y, 1, 1);
-         }
-       }
-
-       texture.needsUpdate = true;
-       document.getElementById("img").src = texture.image.toDataURL();
      };
     </script>
 
