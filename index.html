@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r71/build/three.min.js"></script>
-    <script src="https://cdn.rawgit.com/daishihmr/vox.js/1.0.3/build/vox.min.js"></script>
+    <style> #list { position:relative; width: 100%; height:50px; display:block; clear:both; } </style>
   </head>
   <body>
-
-    <select>
+    <select id="list">
       <option value=""> -- select chr -- </option>
       <optgroup label="friends">
 	<option value="chr_ale">chr_ale</option>
 	<option value="chr_alegrimm">chr_alegrimm</option>
 	<option value="chr_alma">chr_alma</option>
 	<option value="chr_bran">chr_bran</option>
-    <option value="chr_damian">chr_damian</option>
+	<option value="chr_damian">chr_damian</option>
 	<option value="chr_devo">chr_devo</option>
 	<option value="chr_duende">chr_duende</option>
 	<option value="chr_gumer">chr_gumer</option>
@@ -225,81 +221,9 @@
 	<option value="chr_timothyleary">chr_timothyleary</option>
       </optgroup>  
     </select>
-    <canvas id="c"></canvas>
-
-    <script>
-     window.onload = function() {
-       var updateListeners = [];
-       var update = function(frame) {
-         updateListeners.forEach(function(listener) {
-           listener(frame);
-         });
-       };
-       var canvas = document.querySelector("canvas");
-       var select = document.querySelector("select");
-       var anchor = document.createElement("a");
-       anchor.href = window.location.href;
-       
-       var scene = new THREE.Scene();
-       var camera = new THREE.PerspectiveCamera(100, window.innerWidth/window.innerHeight, 0.1, 1000);
-       var cameraTarget = new THREE.Vector3(0, 6.66, 0);
-       updateListeners.push(function(frame) {
-         camera.position.x = Math.cos(frame * 0.01) * 50;
-         camera.position.y = 25;
-         camera.position.z = Math.sin(frame * 0.01) * 50;
-         camera.lookAt(cameraTarget);
-       });
-     
-       var directionalLight = new THREE.DirectionalLight(0xffffff, 0.95);
-       directionalLight.castShadow = true;
-       directionalLight.shadowMapWidth = directionalLight.shadowMapHeight = 512;
-       directionalLight.shadowCameraTop = 100;
-       directionalLight.shadowCameraBottom = -100;
-       directionalLight.shadowCameraLeft = -100;
-       directionalLight.shadowCameraRight = 100;
-       directionalLight.shadowCameraNear = 0.1;
-       directionalLight.shadowCameraFar = 1000;
-       directionalLight.position.set(100, 100, 100);
-       scene.add(directionalLight);
-
-       var ambientLight = new THREE.AmbientLight(0x666666);
-       scene.add(ambientLight);
-       
-       var renderer = new THREE.WebGLRenderer({
-         canvas: canvas
-       });
-       renderer.setSize(window.innerWidth, window.innerHeight);
-       renderer.shadowMapEnabled = true;
-       renderer.setClearColor(0xf9ffe0);
-
-       var parser = new vox.Parser();
-       var render_voxel = function(voxelData) {
-         var builder = new vox.MeshBuilder(voxelData);
-         var mesh = builder.createMesh();
-         mesh.position.set(0, 0, 0);
-         mesh.castShadow = true;
-         mesh.receiveShadow = false;
-         scene.children.pop();
-         scene.add(mesh);
-       };
-       var chr_vox = anchor.search ? anchor.search.replace("?", "") : "chr_grey";
-       window.history.pushState( {}, "voxfriends", anchor.pathname + "?" + chr_vox);
-       parser.parse("vox/"+chr_vox+".vox").then(render_voxel);
-
-       select.addEventListener("change", function(){
-         window.history.pushState( {}, "voxfriends", anchor.pathname + "?" + this.value);
-         parser.parse("vox/"+this.value+".vox").then(render_voxel);
-       });
-     
-       var frame = 0;
-       var render = function() {
-         update(frame++);
-         renderer.render(scene, camera);
-         requestAnimationFrame(render);
-       };
-       render();
-     };
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+    <script src="js/three-orbits.js"></script>
+    <script src="https://cdn.rawgit.com/daishihmr/vox.js/1.0.3/build/vox.min.js"></script>
+    <script src="js/voxfriends.js"></script>
   </body>
 </html>
